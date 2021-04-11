@@ -1,0 +1,12 @@
+<view class="container"> 
+<button type="primary" onTap="chat">
+{{message}}
+</button> 
+</view>
+
+<!-- <modal show="{{false}}" >
+  <view slot="header">Title</view>
+    content
+  <view slot="footer">OK</view>
+</modal> -->
+ 

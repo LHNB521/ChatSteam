@@ -1,0 +1,29 @@
+<view class="cu-chat1" id="j">
+<view class="cu-chat" a:for="{{newslist}}" a:key="key">
+  <view class="cu-item self" a:if='{{item.speaker!="客服"}}'>
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url();  "></view>
+  </view>
+  <view class="cu-item"  a:else>
+    <view class="cu-avatar radius" style="background-image:url();"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="height:30px">
+  <input class="solid-bottom" onFocus="InputFocus" onBlur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" 
+  cursor-spacing="10" placeholder="输入内容" value="{{use}}" onInput='userInput'></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow" onTap='send'>发送</button>
+</view>
